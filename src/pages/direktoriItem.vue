@@ -28,7 +28,6 @@
       </div>
     </div>
   </template>
-
   </q-page>
 </template>
 

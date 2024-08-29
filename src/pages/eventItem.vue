@@ -1,5 +1,6 @@
 <template>
-  <q-page padding class="container" v-if="eventItem.object">
+  <q-page padding class="container">
+    <template  v-if="eventItem.object">
     <h1 class="text-center text-weight-bold text-h2">
       {{ eventItem.object.title }}
     </h1>
@@ -10,6 +11,16 @@
     <div class="content">
       <div v-html="eventItem.object.metadata.teks_event" />
     </div>
+  </template>
+    <template v-if="!eventItem.object">
+      <div class="q-pa-md">
+        <div class="q-gutter-md">
+          <q-skeleton width="100%" height="50px" />
+          <q-skeleton width="100%" height="350px" />
+          <q-skeleton width="100%" height="100px" />
+        </div>
+      </div>
+    </template>
   </q-page>
 </template>
 

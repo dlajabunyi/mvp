@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="q-pa-lg row items-start q-gutter-lg eventcard">
+      <template v-if="events.objects">
       <router-link
         :to="`/event/` + item.id"
         v-for="item in events.objects"
@@ -16,6 +17,52 @@
           </q-card-section>
         </q-card>
       </router-link>
+    </template>
+    <template v-if="!events.objects">
+      <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+
+    </template>
     </div>
   </div>
 </template>

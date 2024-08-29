@@ -1,5 +1,6 @@
 <template>
   <div class="q-pa-md jurnalcard flex flex-column">
+  <template v-if="jurnals.objects">
     <q-card
       class="my-card jurnalcarditem"
       v-for="item in jurnals.objects"
@@ -13,6 +14,51 @@
         </q-card-section>
       </router-link>
     </q-card>
+  </template>
+  <template v-if="!jurnals.objects">
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+    <q-card
+      class="my-card jurnalcarditem"
+    >
+        <q-card-section>
+          <q-skeleton width="100%" height="350px" />
+        </q-card-section>
+    </q-card>
+  </template>
   </div>
 </template>
 
