@@ -1,5 +1,6 @@
 <template>
-  <q-page padding class="container" v-if="direktoriItem.object">
+  <q-page padding class="container">
+    <template v-if="direktoriItem.object">
     <h1 class="text-center text-weight-bold text-h2 q-mb-sm">
       {{ direktoriItem.object.title }}
     </h1>
@@ -17,6 +18,17 @@
     <div class="content">
       <div v-html="direktoriItem.object.metadata.deskripsi" />
     </div>
+  </template>
+  <template v-if="!direktoriItem.object">
+    <div class="q-pa-md">
+      <div class="q-gutter-md">
+        <q-skeleton width="100%" height="50px" />
+        <q-skeleton width="100%" height="350px" />
+        <q-skeleton width="100%" height="100px" />
+      </div>
+    </div>
+  </template>
+
   </q-page>
 </template>
 
