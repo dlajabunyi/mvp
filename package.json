@@ -7,8 +7,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"No test specified\" && exit 0",
-    "dev": "quasar dev",
-    "build": "quasar build"
+    "build": "quasar build",
+    "deploy": "vercel",
+    "dev": "quasar dev"
   },
   "dependencies": {
     "axios": "^1.2.1",
