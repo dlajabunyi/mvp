@@ -4,15 +4,19 @@
       {{ jurnalItem.object.title }}
     </h1>
     <p class="text-h5">{{ jurnalItem.object.metadata.sub_title }}</p>
-    <div class="pdf"></div>
+    <div :style="{ width: '1028px', height: '700px'}">
+      <VPdfViewer :src="jurnalItem.object.metadata.file_pdf.url" />
+    </div>
+    <!-- <div class="pdf"></div> -->
   </q-page>
 </template>
 
 <script>
+import { VPdfViewer } from "@vue-pdf-viewer/viewer";
 import axios from "axios";
 
 export default {
-  components: {},
+  components: { VPdfViewer },
   data() {
     return {
       jurnalItem: "",

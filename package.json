@@ -12,14 +12,15 @@
     "dev": "quasar dev"
   },
   "dependencies": {
-    "axios": "^1.2.1",
-    "vue-i18n": "^9.0.0",
     "@quasar/extras": "^1.16.4",
+    "@vue-pdf-viewer/viewer": "^1.1.2",
+    "axios": "^1.2.1",
+    "leaflet": "^1.9.4",
+    "leaflet.markercluster": "^1.5.3",
     "quasar": "^2.16.0",
     "vue": "^3.4.18",
-    "vue-router": "^4.0.12",
-    "leaflet": "^1.9.4",
-    "leaflet.markercluster": "^1.5.3"
+    "vue-i18n": "^9.0.0",
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
