@@ -1,15 +1,14 @@
 <template>
-  <div>Jurnal</div>
-  <!-- <q-page padding class="container" v-if="jurnalItem.object">
+  <q-page padding class="container" v-if="jurnalItem.object">
     <h1 class="text-weight-bold text-h4">
       {{ jurnalItem.object.title }}
     </h1>
     <p class="text-h5">{{ jurnalItem.object.metadata.sub_title }}</p>
     <div class="pdf"></div>
-  </q-page> -->
+  </q-page>
 </template>
 
-<!-- <script>
+<script>
 import axios from "axios";
 
 export default {
@@ -31,7 +30,7 @@ export default {
       });
   },
 };
-</script> -->
+</script>
 
 <style>
 .featured-image {
