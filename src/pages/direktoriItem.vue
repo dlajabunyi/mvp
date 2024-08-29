@@ -1,21 +1,21 @@
 <template>
   <q-page padding class="container" v-if="direktoriItem.object">
-    <h1 class="text-center text-weight-bold text-h2">
+    <h1 class="text-center text-weight-bold text-h2 q-mb-sm">
       {{ direktoriItem.object.title }}
     </h1>
-    <div class="featured-image">
-      <q-img :src="direktoriItem.object.metadata.foto_ilustrasi.url" />
-    </div>
+    <p class="text-center text-h6"><strong>Lokasi:</strong> {{ direktoriItem.object.metadata.lokasi }}</p>
     <vue-sound
       livestream
       show-download
       :title="direktoriItem.object.title"
-      :details="direktoriItem.object.metadata.lokasi"
+      details="All Rights Reserved by Dlajabunyi.id &copy; 2024"
       :file="`/audio/` + direktoriItem.object.metadata.audio"
     />
+    <div class="featured-image">
+      <q-img :src="direktoriItem.object.metadata.foto_ilustrasi.url" />
+    </div>
     <div class="content">
       <div v-html="direktoriItem.object.metadata.deskripsi" />
-      <p><strong>Lokasi:</strong> {{ direktoriItem.object.metadata.lokasi }}</p>
     </div>
   </q-page>
 </template>
@@ -51,9 +51,13 @@ export default {
 @import "vue-sound/style.css";
 
 .featured-image {
-  margin: 50px 0;
+  margin: 20px 0 50px 0;
 }
 .content {
   margin-top: 30px;
+}
+
+.player {
+  background-color: #222 !important;
 }
 </style>

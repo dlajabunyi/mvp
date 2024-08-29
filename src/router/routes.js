@@ -60,7 +60,7 @@ const routes = [
   {
     path: "/peta",
     component: () => import("layouts/MasterLayout.vue"),
-    children: [{ path: "", component: () => import("pages/petaList.vue") }],
+    children: [{ path: "", component: () => import("pages/petaPage.vue") }],
   },
   {
     path: "/direktori",

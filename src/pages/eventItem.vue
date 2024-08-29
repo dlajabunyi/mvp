@@ -1,113 +1,42 @@
 <template>
-  <q-page padding class="container">
-    <h1 class="text-weight-bold text-h2">Event 1</h1>
+  <q-page padding class="container" v-if="eventItem.object">
+    <h1 class="text-center text-weight-bold text-h2">
+      {{ eventItem.object.title }}
+    </h1>
+    <p class="text-center text-weight-bold text-h5"> Tanggal: {{ eventItem.object.metadata.tanggal_event }} </p>
     <div class="featured-image">
-      <q-img src="https://placehold.co/1920x1080?text=Dummy" />
+      <q-img :src="eventItem.object.metadata.foto_poster_event.url" />
     </div>
     <div class="content">
-      <p>
-        I'm baby distillery flannel synth truffaut kale chips grailed gatekeep
-        tofu +1 sartorial forage four loko unicorn. Scenester twee gorpcore
-        gentrify green juice. Vinyl freegan flannel, migas fam taxidermy cronut
-        keytar semiotics. +1 slow-carb chia messenger bag fashion axe. Ethical
-        williamsburg cardigan vaporware viral single-origin coffee.
-      </p>
-      <p>
-        Prism literally green juice blue bottle, master cleanse portland etsy
-        salvia kogi offal knausgaard bespoke kitsch copper mug quinoa. Food
-        truck shaman tbh adaptogen forage lyft. Cliche whatever blackbird
-        spyplane, yes plz echo park enamel pin neutral milk hotel crucifix lyft
-        JOMO tilde cornhole mlkshk. Cred typewriter man bun seitan freegan.
-        Shaman bruh fixie sartorial ramps.
-      </p>
-      <p>
-        Disrupt tumeric cupping, la croix enamel pin iceland vibecession hoodie
-        gatekeep fashion axe yr bushwick DSA. Palo santo blue bottle narwhal
-        roof party Brooklyn godard. Cardigan cred sus VHS 8-bit celiac. Ennui
-        adaptogen YOLO, hella bicycle rights tonx put a bird on it seitan hoodie
-        swag VHS. Bespoke tonx thundercats jawn. Jean shorts praxis grailed
-        marfa activated charcoal af. Vice PBR&B pok pok sriracha hexagon artisan
-        copper mug.
-      </p>
-      <p>
-        Fit migas jean shorts you probably haven't heard of them, beard af
-        poutine blog pop-up. Art party four loko tofu blue bottle, cred la croix
-        iPhone tonx pork belly chartreuse actually cray man braid JOMO.
-        Aesthetic VHS next level, cliche man bun skateboard hella. Twee
-        mumblecore direct trade crucifix pug.
-      </p>
-      <p>
-        DSA distillery raw denim hammock, mumblecore paleo franzen small batch
-        meh sustainable kogi cred chambray taxidermy. Photo booth portland 90's
-        messenger bag sriracha sartorial artisan snackwave retro cloud bread.
-        Street art kombucha 3 wolf moon blue bottle, stumptown meditation master
-        cleanse tacos twee. Poke post-ironic heirloom, grailed street art 90's
-        palo santo meditation.
-      </p>
-      <p>
-        I'm baby distillery flannel synth truffaut kale chips grailed gatekeep
-        tofu +1 sartorial forage four loko unicorn. Scenester twee gorpcore
-        gentrify green juice. Vinyl freegan flannel, migas fam taxidermy cronut
-        keytar semiotics. +1 slow-carb chia messenger bag fashion axe. Ethical
-        williamsburg cardigan vaporware viral single-origin coffee.
-      </p>
-      <p>
-        Prism literally green juice blue bottle, master cleanse portland etsy
-        salvia kogi offal knausgaard bespoke kitsch copper mug quinoa. Food
-        truck shaman tbh adaptogen forage lyft. Cliche whatever blackbird
-        spyplane, yes plz echo park enamel pin neutral milk hotel crucifix lyft
-        JOMO tilde cornhole mlkshk. Cred typewriter man bun seitan freegan.
-        Shaman bruh fixie sartorial ramps.
-      </p>
-      <p>
-        Disrupt tumeric cupping, la croix enamel pin iceland vibecession hoodie
-        gatekeep fashion axe yr bushwick DSA. Palo santo blue bottle narwhal
-        roof party Brooklyn godard. Cardigan cred sus VHS 8-bit celiac. Ennui
-        adaptogen YOLO, hella bicycle rights tonx put a bird on it seitan hoodie
-        swag VHS. Bespoke tonx thundercats jawn. Jean shorts praxis grailed
-        marfa activated charcoal af. Vice PBR&B pok pok sriracha hexagon artisan
-        copper mug.
-      </p>
-      <p>
-        Fit migas jean shorts you probably haven't heard of them, beard af
-        poutine blog pop-up. Art party four loko tofu blue bottle, cred la croix
-        iPhone tonx pork belly chartreuse actually cray man braid JOMO.
-        Aesthetic VHS next level, cliche man bun skateboard hella. Twee
-        mumblecore direct trade crucifix pug.
-      </p>
-      <p>
-        Fit migas jean shorts you probably haven't heard of them, beard af
-        poutine blog pop-up. Art party four loko tofu blue bottle, cred la croix
-        iPhone tonx pork belly chartreuse actually cray man braid JOMO.
-        Aesthetic VHS next level, cliche man bun skateboard hella. Twee
-        mumblecore direct trade crucifix pug.
-      </p>
-      <p>
-        DSA distillery raw denim hammock, mumblecore paleo franzen small batch
-        meh sustainable kogi cred chambray taxidermy. Photo booth portland 90's
-        messenger bag sriracha sartorial artisan snackwave retro cloud bread.
-        Street art kombucha 3 wolf moon blue bottle, stumptown meditation master
-        cleanse tacos twee. Poke post-ironic heirloom, grailed street art 90's
-        palo santo meditation.
-      </p>
-      <p>
-        I'm baby distillery flannel synth truffaut kale chips grailed gatekeep
-        tofu +1 sartorial forage four loko unicorn. Scenester twee gorpcore
-        gentrify green juice. Vinyl freegan flannel, migas fam taxidermy cronut
-        keytar semiotics. +1 slow-carb chia messenger bag fashion axe. Ethical
-        williamsburg cardigan vaporware viral single-origin coffee.
-      </p>
-      <p>
-        Prism literally green juice blue bottle, master cleanse portland etsy
-        salvia kogi offal knausgaard bespoke kitsch copper mug quinoa. Food
-        truck shaman tbh adaptogen forage lyft. Cliche whatever blackbird
-        spyplane, yes plz echo park enamel pin neutral milk hotel crucifix lyft
-        JOMO tilde cornhole mlkshk. Cred typewriter man bun seitan freegan.
-        Shaman bruh fixie sartorial ramps.
-      </p>
+      <div v-html="eventItem.object.metadata.teks_event" />
     </div>
   </q-page>
 </template>
+
+<script>
+import axios from "axios";
+
+
+
+export default {
+  data() {
+    return {
+      eventItem: "",
+    };
+  },
+  async mounted() {
+    axios
+      .get(
+        "https://api.cosmicjs.com/v3/buckets/dlaja-bunyi-cms-production/objects/" +
+          this.$route.params.id +
+          "?read_key=fCWnVnBxtCwAuYRbqUAGj1MfVvptOs05qBAtfP9He4AjAjrLBW&depth=1&props=slug,title,metadata,id"
+      )
+      .then((response) => {
+        this.eventItem = response.data;
+      });
+  },
+};
+</script>
 
 <style>
 .featured-image {
