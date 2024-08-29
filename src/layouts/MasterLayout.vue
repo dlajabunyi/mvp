@@ -21,4 +21,8 @@ import Header from "src/components/master/globalHeader.vue";
   font-size: 18px;
   line-height: 30px;
 }
+.q-page.container i {
+  font-size: 40px;
+}
+
 </style>
