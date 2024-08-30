@@ -4,10 +4,10 @@
             <div class="q-pa-xl" v-for="item in direktoris.objects" :key="item.id">
               <router-link :to="`/direktori/` + item.id">
                 <div class="row">
-                  <div class="col-5">
-                    <q-img :src="item.metadata.foto_ilustrasi.url" :ratio="16 / 9" />
+                  <div class="col-5 dlj_imggrey">
+                    <q-img :src="item.metadata.foto_ilustrasi.url" :ratio="16 / 9" class="shadow-5"/>
                   </div>
-                  <div class="col q-pl-lg">
+                  <div class="col q-pl-xl">
                     <div class="text-h4 text-weight-bold">{{ item.title }}</div>
                     <div class="text-subtitle1 text-weight-bold q-pb-md">
                       {{ item.metadata.lokasi }}

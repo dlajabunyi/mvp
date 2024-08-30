@@ -17,42 +17,42 @@
   </template>
   <template v-if="!jurnals.objects">
     <q-card
-      class="my-card jurnalcarditem"
+      class="my-card jurnalcarditem no-shadow no-shadow"
     >
         <q-card-section>
           <q-skeleton width="100%" height="350px" />
         </q-card-section>
     </q-card>
     <q-card
-      class="my-card jurnalcarditem"
+      class="my-card jurnalcarditem no-shadow"
     >
         <q-card-section>
           <q-skeleton width="100%" height="350px" />
         </q-card-section>
     </q-card>
     <q-card
-      class="my-card jurnalcarditem"
+      class="my-card jurnalcarditem no-shadow"
     >
         <q-card-section>
           <q-skeleton width="100%" height="350px" />
         </q-card-section>
     </q-card>
     <q-card
-      class="my-card jurnalcarditem"
+      class="my-card jurnalcarditem no-shadow"
     >
         <q-card-section>
           <q-skeleton width="100%" height="350px" />
         </q-card-section>
     </q-card>
     <q-card
-      class="my-card jurnalcarditem"
+      class="my-card jurnalcarditem no-shadow"
     >
         <q-card-section>
           <q-skeleton width="100%" height="350px" />
         </q-card-section>
     </q-card>
     <q-card
-      class="my-card jurnalcarditem"
+      class="my-card jurnalcarditem no-shadow"
     >
         <q-card-section>
           <q-skeleton width="100%" height="350px" />

@@ -1,10 +1,11 @@
 <template>
-  <q-header elevated class="bg-dark text-white">
+  <q-header class="dlj_mainnav text-black">
     <div class="row container">
       <q-toolbar class="col">
         <q-toolbar-title>
           <q-btn flat to="/" class="text-lowercase text-center">
             <h1 class="text-h6">
+              <!-- <q-img src="/public/logo.jpg" width="50px"/> -->
               <q-icon name="fas fa-podcast" /> dlajabunyi.id
             </h1>
           </q-btn>
@@ -14,8 +15,7 @@
               indicator-color="transparent"
               dense
               inline-label
-              class="text-grey"
-              active-color="white"
+              class="text-black"
             >
               <q-route-tab
                 exact
@@ -55,10 +55,3 @@
     </div>
   </q-header>
 </template>
-
-<style>
-.container {
-  max-width: 1080px;
-  margin: 0 auto 0;
-}
-</style>
