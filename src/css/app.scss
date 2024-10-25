@@ -22,10 +22,16 @@
 // Mainnav
 
 .dlj_mainnav {
-  background-color: #f9f8f3;
-  border-bottom: 4px solid #8cbc6a;
+  background-color: #73966f;
+  border-bottom: 0px solid #c7eac3;
+  color: #fff;
+  font-weight: bold;
 }
 
+.dlj_mainnav a {
+  color: #fff;
+  font-weight: bold;
+}
 .dlj_mainnav .q-hoverable:hover > .q-focus-helper {
   background: transparent !important;
 }

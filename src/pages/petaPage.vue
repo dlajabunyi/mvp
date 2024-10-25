@@ -8,15 +8,15 @@
         layer-type="base"
         name="OpenStreetMap"
       ></l-tile-layer>
-      <l-marker :lat-lng="item.latlng" v-for="item in dataDummy" :key="item.id">
+      <l-marker :lat-lng="item.metadata.latlng" v-for="item in direktoris" :key="item.id">
         <l-popup>
-          <router-link :to="`/direktori/` + item.slug">
+          <router-link :to="`/direktori/` + item.metadata.slug">
           <div class="row" style="width: 350px;">
             <div class="col-4 q-pr-md">
-              <q-img :src="item.thumbnail" /></div>
+              <q-img :src="item.metadata.foto_ilustrasi.url" /></div>
             <div class="col">
-              <div class="text-weight-bold text-subtitle1"> {{  item.title }}</div>
-              <div class="text-weight-medium"> {{  item.location }}</div>
+              <div class="text-weight-bold text-subtitle1"> {{  item.metadata.title }}</div>
+              <div class="text-weight-medium"> {{  item.metadata.lokasi }}</div>
           </div>
         </div>
       </router-link>
@@ -87,6 +87,24 @@ export default {
       ],
     };
   },
+  mounted() {
+        this.getDirektoris();
+    },
+    methods: {
+        getDirektoris() {
+            this.$axios
+                .get(
+                    "https://api.cosmicjs.com/v3/buckets/dlaja-bunyi-cms-production/objects?pretty=true&query=%7B%22type%22:%22direktoris%22%7D&limit=10&read_key=fCWnVnBxtCwAuYRbqUAGj1MfVvptOs05qBAtfP9He4AjAjrLBW&depth=1&props=slug,title,metadata,id,"
+                )
+                .then((res) => {
+                    this.direktoris = res.data;
+                    console.log(res.data);
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        },
+    },
   // mounted() {
   //   this.getDirektoris();
   // },
