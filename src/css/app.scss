@@ -39,7 +39,7 @@
 // Hero
 
 .hero {
-  background: url(/img/hero.webp) no-repeat center center;
+  background: url(/img/hero2.webp) no-repeat center center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -53,14 +53,15 @@
   max-width: 600px;
   margin: 0 auto 0;
   padding: 100px 0;
-  cursor: url(/img/cursor.png),auto;
 
 }
 .hero .cta h1 {
   font-size: 50px;
   line-height: 55px;
+  color: #73966f;
 }
 .hero .cta p {
+  color: #73966f;
   font-size: 20px;
   line-height: 30px;
   padding-bottom: 30px;
@@ -77,4 +78,27 @@
 .dlj_imggrey img:hover {
   -webkit-filter: none;
   filter:none;
+}
+
+.homefeatured {
+  background: url(/img/spiral2.svg) no-repeat left top;
+  background-size: 400px;
+  padding: 100px 0;
+  height: 100vh;
+}
+
+.homefeatured h3 {
+  color: #73966f;
+  width: 80%;
+}
+
+.homefeatured p {
+  color: #73966f;
+  width: 70%;
+}
+
+
+.homefeatured a {
+  color: #73966f;
+  text-decoration: none;
 }

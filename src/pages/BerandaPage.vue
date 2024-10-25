@@ -1,6 +1,7 @@
 <template>
   <q-page>
     <HomeHero />
+    <HomeFeatured />
     <HomeTentang />
     <HomeProfil />
     <HomeFitur />
@@ -9,6 +10,7 @@
 </template>
 
 <script setup>
+import HomeFeatured from "src/components/home/homeFeatured.vue";
 import HomeFitur from "src/components/home/homeFitur.vue";
 import HomeHero from "src/components/home/homeHero.vue";
 import HomeProfil from "src/components/home/homeProfil.vue";
