@@ -1,11 +1,15 @@
 <template>
   <q-page>
     <HomeHero />
+    <div id="dlj_wrap">
     <HomeFeatured />
     <HomeTentang />
     <HomeProfil />
-    <HomeFitur />
-    <HomeReinforcement />
+    <HomeVisi />
+    <HomeMisi />
+    <!-- <HomeFitur />
+    <HomeReinforcement /> -->
+  </div>
   </q-page>
 </template>
 
@@ -16,6 +20,9 @@ import HomeHero from "src/components/home/homeHero.vue";
 import HomeProfil from "src/components/home/homeProfil.vue";
 import HomeReinforcement from "src/components/home/homeReinforcement.vue";
 import HomeTentang from "src/components/home/homeTentang.vue";
+import HomeVisi from "src/components/home/homeVisi.vue";
+import HomeMisi from "src/components/home/homeMisi.vue";
+
 
 defineOptions({
   name: "BerandaPage",

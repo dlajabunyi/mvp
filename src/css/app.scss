@@ -1,4 +1,10 @@
 // app global css in SCSS form
+// #dlj_wrap {
+//   background: url(/img/spiral2.svg) no-repeat left top fixed;
+//   background-size: 400px;
+
+// }
+
 
 * {
   font-family: "Lato", sans-serif;
@@ -46,6 +52,7 @@
   background-size: contain;
   padding: 20px 0 40px;
   height: 80vh;
+  margin-bottom: 100px;
   // cursor: url('/public/img/cursor.png'),auto;
   // background-color: #f9f8f3;
 }
@@ -81,24 +88,103 @@
 }
 
 .homefeatured {
-  background: url(/img/spiral2.svg) no-repeat left top;
+  background: url(/img/spiral2.svg) no-repeat -22vw 0;
   background-size: 400px;
-  padding: 100px 0;
-  height: 100vh;
+    padding: 100px 0;
+  height: 80vh;
 }
 
 .homefeatured h3 {
-  color: #73966f;
+  color: #207f00;
   width: 80%;
 }
 
 .homefeatured p {
-  color: #73966f;
+  color: #207f00;
   width: 70%;
 }
 
 
 .homefeatured a {
-  color: #73966f;
+  color: #207f00;
   text-decoration: none;
+}
+
+.hometentang {
+  background: url(/img/spiral2.svg), url(/img/spiral2.svg), ;
+  background-repeat: no-repeat, no-repeat;
+  background-position: -22vw 0, 85vw 70vh;
+  background-size: 400px;
+  height: 130vh;
+  padding: 120px 0 100px 0;
+  // background-color: #dedede;
+}
+
+.hometentang .row {
+  margin-top: 100px;
+}
+
+.hometentang h3 {
+  font-size: 60px;
+  color: #207f00;
+}
+
+.hometentang p {
+  color: #207f00;
+
+}
+
+.homeprofil {
+  background: url(/img/spiral2.svg), url(/img/spiral2.svg), ;
+  background-repeat: no-repeat, no-repeat;
+  background-position: -22vw 0, 85vw 70vh;
+  background-size: 400px;
+  height: 130vh;
+  padding: 120px 0 100px 0;
+  text-align: right;
+  // background-color: #dedede;
+
+}
+
+.homeprofil .row {
+  margin-top: 100px;
+}
+
+.homeprofil h3 {
+  font-size: 60px;
+  color: #207f00;
+}
+
+.homeprofil p {
+  color: #207f00;
+
+}
+
+#dlj_direktori {
+  background: url(/img/spiral2.svg), url(/img/spiral2.svg), ;
+  background-repeat: no-repeat, no-repeat;
+  background-position: -22vw 50vh, 85vw 30vh;
+  background-size: 400px;
+  padding: 20px 0 100px 0;
+}
+
+
+#dlj_green {
+  position: absolute;
+  width: 25vw;
+  top: 10vh
+
+}
+
+.dlj_button {
+  background-color: #207f00;
+}
+
+a.dlj_button {
+  color: #fff;
+}
+
+.dlj_button.cta {
+  width: 200px;
+  padding: 0px;
 }

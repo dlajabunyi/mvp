@@ -8,7 +8,21 @@
         layer-type="base"
         name="OpenStreetMap"
       ></l-tile-layer>
-      <l-marker :lat-lng="item.metadata.latlng" v-for="item in direktoris" :key="item.id">
+      <l-marker :lat-lng="item.latlng" v-for="item in dataDummy" :key="item.id">
+        <l-popup>
+          <router-link :to="`/direktori/` + item.slug">
+          <div class="row" style="width: 350px;">
+            <div class="col-4 q-pr-md">
+              <q-img :src="item.thumbnail" /></div>
+            <div class="col">
+              <div class="text-weight-bold text-subtitle1"> {{  item.title }}</div>
+              <div class="text-weight-medium"> {{  item.location }}</div>
+          </div>
+        </div>
+      </router-link>
+    </l-popup>
+      </l-marker>
+      <!-- <l-marker :lat-lng="item.metadata.latlng" v-for="item in direktoris" :key="item.id">
         <l-popup>
           <router-link :to="`/direktori/` + item.metadata.slug">
           <div class="row" style="width: 350px;">
@@ -21,7 +35,7 @@
         </div>
       </router-link>
     </l-popup>
-      </l-marker>
+      </l-marker> -->
     </l-map>
   </div>
   </q-page>
