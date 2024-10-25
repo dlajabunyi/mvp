@@ -8,9 +8,9 @@
         Temukan informasi audio, soundscape dan lagu serta sejarahnya dari
         berbagai wilayah di Indonesia
       </p>
-      <q-btn size="lg" color="dark" class="text-capitalize" to="/peta"
+      <!-- <q-btn size="lg" color="dark" class="text-capitalize" to="/peta"
         >lihat Peta</q-btn
-      >
+      > -->
     </div>
   </div>
 </template>

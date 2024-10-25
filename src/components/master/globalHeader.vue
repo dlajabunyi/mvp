@@ -3,10 +3,10 @@
     <div class="row container">
       <q-toolbar class="col">
         <q-toolbar-title>
-          <q-btn flat to="/" class="text-lowercase text-center">
+          <q-btn flat to="/" class="text-uppercase text-center">
             <h1 class="text-h6">
               <!-- <q-img src="/public/logo.jpg" width="50px"/> -->
-              <q-icon name="fas fa-podcast" /> dlajabunyi.id
+              dlajabunyi
             </h1>
           </q-btn>
 
@@ -17,12 +17,12 @@
               inline-label
               class="text-black"
             >
-              <q-route-tab
+              <!-- <q-route-tab
                 exact
                 class="text-capitalize"
                 label="Beranda"
                 to="/"
-              />
+              /> -->
               <q-route-tab
                 exact
                 class="text-capitalize"
@@ -35,17 +35,29 @@
                 label="Jurnal/ Artikel"
                 to="/jurnal"
               />
-              <q-route-tab
+              <!-- <q-route-tab
                 exact
                 class="text-capitalize"
                 label="Event"
                 to="/event"
-              />
+              /> -->
               <q-route-tab
                 exact
                 class="text-capitalize"
                 label="Tentang Kami"
                 to="/tentang"
+              />
+              <q-route-tab
+                exact
+                class="text-capitalize"
+                label="Dukung"
+                to="/"
+              />
+              <q-route-tab
+                exact
+                class="text-capitalize"
+                label="Cari"
+                to="/"
               />
               <!-- <q-route-tab exact class="text-capitalize" label="About" to="/" /> -->
             </q-tabs>
